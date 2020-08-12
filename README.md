@@ -1,2 +1,2 @@
 # BestContestEver
-###Basic implementation in HTML and CSS
+Basic implementation in HTML and CSS
