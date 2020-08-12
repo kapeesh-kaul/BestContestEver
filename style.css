@@ -22,6 +22,7 @@ nav{
 }
 nav ul{
   float: right;
+  font-family: sans-serif;
   margin-right: 80px;
 }
 nav ul li{
@@ -32,8 +33,18 @@ nav ul li{
 nav ul li a{
   color: white;
   font-size: 17px;
+  font-weight: 100;
   padding: 7px 13px;
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
+  transition: color .5s, background-color .5s, border .5s, border-color .5s;
+}
+a:hover{
+  color: #0c0129;
+  background-color: white;
+  border: 1px solid white;
+  border-color: white;
+  transition: color .5s, background-color .5s, border .5s, border-color .5s;
 }
 body{
   background-color: #0c0129;
