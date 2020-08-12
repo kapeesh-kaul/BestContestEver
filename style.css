@@ -99,3 +99,11 @@ body{
   cursor: pointer;
   transition: background-color 1000ms, colour 1000ms
 }
+.footer{
+  background-color: grey;
+  color: rgba(0,0,0,1);
+  text-align: center;
+  margin-top: 900px;
+  font-family: sans-serif;
+  padding: 10px;
+}
