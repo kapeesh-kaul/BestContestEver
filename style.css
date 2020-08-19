@@ -138,7 +138,7 @@ ul.tabs li:hover {
   border-radius: 3px;
 }
 .container input:focus {
-  outline-color: green;
+  outline-color: white;
 }
 .email,
 .password,
