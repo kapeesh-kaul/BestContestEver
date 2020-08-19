@@ -1,18 +1,19 @@
-*{
+* {
   margin: 0;
   padding: 0;
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
-html , body{
+html,
+body {
   height: 100%;
 }
-nav{
+nav {
   height: 80px;
   width: 100%;
 }
-.logo{
+.logo {
   color: white;
   font-size: 30px;
   line-height: 80px;
@@ -20,40 +21,40 @@ nav{
   padding: 0 50px;
   font-weight: 100;
 }
-nav ul{
+nav ul {
   float: right;
   font-family: sans-serif;
   margin-right: 80px;
 }
-nav ul li{
+nav ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
-nav ul li a{
+nav ul li a {
   color: white;
   font-size: 17px;
   font-weight: 100;
   padding: 7px 13px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
-  transition: color .5s, background-color .5s, border .5s, border-color .5s;
+  transition: color 0.5s, background-color 0.5s, border 0.5s, border-color 0.5s;
 }
-a:hover{
+a:hover {
   color: #0c0129;
   background-color: white;
   border: 1px solid white;
   border-color: white;
-  transition: color .5s, background-color .5s, border .5s, border-color .5s;
+  transition: color 0.5s, background-color 0.5s, border 0.5s, border-color 0.5s;
 }
-body{
+body {
   background-color: #0c0129;
   background-image: url("images/background.jpg");
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   background-blend-mode: soft-light;
 }
-.heading{
+.heading {
   width: 600px;
   height: 300px;
   margin: auto;
@@ -63,7 +64,7 @@ body{
   right: 0px;
   left: 0px;
 }
-.title1{
+.title1 {
   display: block;
   text-align: center;
   color: white;
@@ -71,19 +72,53 @@ body{
   font-family: big john;
   font-weight: 100;
 }
-.title2{
+.title2 {
   display: block;
-  margin-top: 15px;
+  margin: 15px auto;
+  margin-bottom: 30px;
   text-align: center;
   color: white;
   font-size: 14pt;
   font-family: serif;
 }
-.register{
+.login {
+  padding: 20px;
+  color: white;
+  margin: auto;
+  text-align: center;
+  max-width: 800px;
+  font-family: sans-serif;
+}
+.login label {
+  display: block;
+  min-width: 150px;
+  text-align: left;
+}
+.login input {
+  border: 1px solid #ffffff20;
+  background-color: #ffffff20;
+  height: 2rem;
+  line-height: 1.5rem;
+  color: white;
+  padding: 8px;
+  flex-basis: 50%;
+  border: 2px solid #ffffff20;
+  border-radius: 3px;
+}
+.login input:focus {
+  outline-color: green;
+}
+.email,
+.password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.register {
   margin: 50px auto;
-  display:  block;
-  width: 180px;
-  height: 50px;
+  display: inline-block;
+  padding: 18px 36px;
   border: 3px solid white;
   background-color: rgba(255, 255, 255, 0);
   color: white;
@@ -91,19 +126,26 @@ body{
   font-weight: bold;
   border-radius: 5px;
 
-  transition: background-color 1000ms, colour 1000ms
+  transition: background-color 1000ms, color 1000ms;
 }
-.register:hover{
+.register:hover {
+  border: 3px solid white;
   background-color: rgba(255, 255, 255, 1);
   color: #222;
   cursor: pointer;
-  transition: background-color 1000ms, colour 1000ms
 }
-.footer{
+
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
   background-color: grey;
-  color: rgba(0,0,0,1);
+  color: rgba(0, 0, 0, 1);
   text-align: center;
-  margin-top: 900px;
   font-family: sans-serif;
   padding: 10px;
 }
+/* .error{
+  border : 3px solid red;
+} */

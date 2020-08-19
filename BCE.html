@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>BestContestEver</title>
-    <meta charset="utf-8">
-    <meta name="author" content="kapeesh-kaul, ctejanaidu">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta name="author" content="kapeesh-kaul, ctejanaidu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="header">
@@ -19,12 +19,73 @@
       </nav>
     </div>
     <div class="heading">
-      <span class="title1" >BestContestEver</span>
+      <span class="title1">BestContestEver</span>
       <span class="title2">For those who are up for a Challenge</span>
-      <button class="register">Sign up Now!</button>
+      <form class="login">
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="jethalal@tarakmehta.com"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password:</label>
+          <input
+            id="password"
+            type="text"
+            name="password"
+            placeholder="Nuclear Launch Codes"
+          />
+        </div>
+        <a class="register" onclick="handleClick()">
+          Sign in
+        </a>
+      </form>
     </div>
     <div class="footer">
       <p>[ ] with ❤ by kapeesh-kaul & ctejanaidu</p>
     </div>
+    <script type="text/javascript">
+      const users = [
+        {
+          email: "string1@gmail.com",
+          password: "passwordstring",
+        },
+        {
+          email: "kkapeesh1999@gmail.com",
+          password: "asdwadsadwadas",
+        },
+      ];
+
+      function handleClick() {
+        const register = document.querySelector(".register");
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+
+        if (email.trim() === "" || !validateEmail(email)) {
+          return alert("Invalid Email");
+        }
+        if (password.trim() === "" || !validatePassword(password)) {
+          return alert("Invalid Pass");
+        }
+
+        const user = users.filter((user) => user.email === email)[0];
+
+        if (!user && user.password === password)
+          alert("welcome to the contest!");
+        else alert("FIR kar dunga");
+      }
+      function validateEmail(email) {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+          ? true
+          : false;
+      }
+      function validatePassword(password, length = 6) {
+        return password.length >= length ? true : false;
+      }
+    </script>
   </body>
 </html>
