@@ -64,6 +64,28 @@ body {
   right: 0px;
   left: 0px;
 }
+ul.tabs {
+  color: white;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+}
+ul.tabs li {
+  margin: 1px;
+  margin-bottom: 30px;
+  border: 1px solid #0c0129;
+  background-color: #0c0129;
+  border-radius: 3px;
+  padding: 7px 100px;
+  transition: all 0.2s ease-in-out;
+}
+ul.tabs li:hover {
+  border-bottom-width: 5px;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  color: #0c0129;
+}
 .title1 {
   display: block;
   text-align: center;
@@ -81,20 +103,30 @@ body {
   font-size: 14pt;
   font-family: serif;
 }
-.login {
+.container {
   padding: 20px;
   color: white;
   margin: auto;
   text-align: center;
   max-width: 800px;
   font-family: sans-serif;
+  display: none;
 }
-.login label {
+.active {
+  display: block;
+}
+.activetab {
+  border-bottom-width: 5px;
+  border: 1px solid #ffffff30 !important;
+  background-color: #ffffff95 !important;
+  color: #0c0129 !important;
+}
+.container label {
   display: block;
   min-width: 150px;
   text-align: left;
 }
-.login input {
+.container input {
   border: 1px solid #ffffff20;
   background-color: #ffffff20;
   height: 2rem;
@@ -105,11 +137,12 @@ body {
   border: 2px solid #ffffff20;
   border-radius: 3px;
 }
-.login input:focus {
+.container input:focus {
   outline-color: green;
 }
 .email,
-.password {
+.password,
+.name {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +151,7 @@ body {
 .register {
   margin: 50px auto;
   display: inline-block;
-  padding: 18px 36px;
+  padding: 14px 36px;
   border: 3px solid white;
   background-color: rgba(255, 255, 255, 0);
   color: white;

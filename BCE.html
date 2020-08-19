@@ -21,7 +21,13 @@
     <div class="heading">
       <span class="title1">BestContestEver</span>
       <span class="title2">For those who are up for a Challenge</span>
-      <form class="login">
+
+      <ul class="tabs">
+        <li class="activetab" onclick="switchTab(0)">Login</li>
+        <li onclick="switchTab(1)">Sign Up</li>
+      </ul>
+
+      <form class="container active" id="login">
         <div class="email">
           <label for="email">Email:</label>
           <input
@@ -40,8 +46,41 @@
             placeholder="Nuclear Launch Codes"
           />
         </div>
-        <a class="register" onclick="handleClick()">
+        <a class="register" onclick="handleLogin()">
           Sign in
+        </a>
+      </form>
+
+      <form class="container" id="signup">
+        <div class="name">
+          <label for="name">Name:</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Jethala Champakla Gadha"
+          />
+        </div>
+        <div class="email">
+          <label for="email">Email:</label>
+          <input
+            id="signupemail"
+            type="text"
+            name="email"
+            placeholder="jethalal@tarakmehta.com"
+          />
+        </div>
+        <div class="password">
+          <label for="password">Password:</label>
+          <input
+            id="signuppassword"
+            type="text"
+            name="password"
+            placeholder="Nuclear Launch Codes"
+          />
+        </div>
+        <a class="register" onclick="handleSignup()">
+          Register
         </a>
       </form>
     </div>
@@ -51,17 +90,18 @@
     <script type="text/javascript">
       const users = [
         {
+          name: "babloo",
           email: "string1@gmail.com",
           password: "passwordstring",
         },
         {
+          name: "Kapeesh Kaul",
           email: "kkapeesh1999@gmail.com",
           password: "asdwadsadwadas",
         },
       ];
 
-      function handleClick() {
-        const register = document.querySelector(".register");
+      function handleLogin() {
         const email = document.querySelector("#email").value;
         const password = document.querySelector("#password").value;
 
@@ -74,10 +114,35 @@
 
         const user = users.filter((user) => user.email === email)[0];
 
-        if (!user && user.password === password)
+        if (user && user.password === password)
           alert("welcome to the contest!");
         else alert("FIR kar dunga");
       }
+      function handleSignup() {
+        const email = document.querySelector("#signupemail").value;
+        const password = document.querySelector("#signuppassword").value;
+        const name = document.querySelector("#name").value;
+        if (email.trim() === "" || !validateEmail(email)) {
+          return alert("Invalid Email");
+        }
+        if (password.trim() === "" || !validatePassword(password)) {
+          return alert("Invalid Pass");
+        }
+        if (!validateName(name)) {
+          return alert("Invalid Name");
+        }
+        const user = users.filter((user) => user.email === email)[0];
+
+        if (user) return alert("User exists");
+        users.push({
+          name,
+          email,
+          password,
+        });
+        switchTab(0);
+        return alert(`${name}! Welcome to the Contest`);
+      }
+
       function validateEmail(email) {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
           ? true
@@ -85,6 +150,29 @@
       }
       function validatePassword(password, length = 6) {
         return password.length >= length ? true : false;
+      }
+      function validateName(password, length = 2) {
+        return name.trim().length >= length ? false : true;
+      }
+
+      function switchTab(index) {
+        const login = document.querySelector("#login");
+        const signup = document.querySelector("#signup");
+        const tabitems = document
+          .querySelector(".tabs")
+          .getElementsByTagName("li");
+        if (index === 0) {
+          login.classList.add("active");
+          signup.classList.remove("active");
+
+          tabitems[0].classList.add("activetab");
+          tabitems[1].classList.remove("activetab");
+        } else {
+          login.classList.remove("active");
+          signup.classList.add("active");
+          tabitems[0].classList.remove("activetab");
+          tabitems[1].classList.add("activetab");
+        }
       }
     </script>
   </body>
