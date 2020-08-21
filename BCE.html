@@ -41,7 +41,7 @@
           <label for="password">Password:</label>
           <input
             id="password"
-            type="text"
+            type="password"
             name="password"
             placeholder="Nuclear Launch Codes"
           />
@@ -74,7 +74,7 @@
           <label for="password">Password:</label>
           <input
             id="signuppassword"
-            type="text"
+            type="password"
             name="password"
             placeholder="Nuclear Launch Codes"
           />
@@ -116,7 +116,7 @@
 
         if (user && user.password === password)
           alert("welcome to the contest!");
-        else alert("FIR kar dunga");
+        else alert("Invalid Login!");
       }
       function handleSignup() {
         const email = document.querySelector("#signupemail").value;
