@@ -103,6 +103,24 @@ ul.tabs li:hover {
   font-size: 14pt;
   font-family: serif;
 }
+.leaderboardTitle {
+  display: block;
+  text-align: center;
+  color: white;
+  font-size: 60pt;
+  font-family: big john;
+  font-weight: 100;
+}
+.posholder {
+  display: block;
+  margin: 400px auto;
+  margin-bottom: 30px;
+  text-align: center;
+  color: white;
+  font-size: 20pt;
+  font-family: serif;
+  padding: 10px;
+}
 .container {
   padding: 20px;
   color: white;

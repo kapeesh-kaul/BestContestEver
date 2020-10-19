@@ -1,0 +1,15 @@
+<?xml-stylesheet type="text/css" href="xmlstyle.css"?> 
+<body>
+    <name>BestContestEver</name>
+    <tagline>For Those Who are up for a Challenge</tagline>
+    <description>
+        This Contest is about riddles, A riddle is a word puzzle in which one player asks a confusing question, and the other player has to figure out its meaning. Riddles often rely on puns and double entendres. in other words, the key to solving the riddle is to realize that one of the words is being used in a surprising or unexpected way. Riddles are sometimes called brain teasers, but this term actually refers to a broader category of thought-based games.
+    </description>
+    <rules>
+        Rules:
+        <rule>Answer as many riddles as possibles to increase your score.</rule>
+        <rule>For every correct riddle answered, you will get 10 points.</rule>
+        <rule>For every incorrect answer you will loose 3 points.</rule>
+        <rule>You have 2 chances for every riddle so use them wisely.</rule>
+    </rules>
+</body>

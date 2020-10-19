@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="author" content="kapeesh-kaul, ctejanaidu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Leaderboard</title>
+  </head>
+  <body>
+    <div class="header">
+      <nav>
+        <label class="logo">BestContestEver</label>
+        <ul>
+          <li><a href="BCE.html">Home</a></li>
+          <li><a href="leaderboard.html">Leaderboard</a></li>
+          <li><a href="about.xml">About</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="heading">
+      <span class="leaderboardTitle">Leaderboard</span>
+    </div>
+    <div class="posholder" id="leaderboard"></div>
+    <div class="footer">
+      <p>[ ] with ❤ by kapeesh-kaul & ctejanaidu</p>
+    </div>
+    <script>
+      let xmlContent = "";
+      let leaderboard = document.getElementById("leaderboard");
+      let url = "leaderboard.xml";
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+          let parser = new DOMParser();
+          let xml = parser.parseFromString(data, "application/xml");
+          posholders = xml.querySelectorAll("posholder");
+          posholders.forEach((posholder) => {
+            let span = document.createElement("span");
+            // console.log(posholder.innerHTML);
+            span.innerHTML = posholder.innerHTML;
+            leaderboard.appendChild(span);
+            leaderboard.appendChild(document.createElement("br"));
+          });
+        });
+    </script>
+  </body>
+</html>

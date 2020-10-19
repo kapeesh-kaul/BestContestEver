@@ -1,0 +1,22 @@
+<root>
+    <user>
+        <name>Kapeesh Kaul</name>
+        <email>kapeesh@bce.com</email>
+        <password>topsecret</password>
+    </user>
+    <user>
+        <name>Teja Naidu</name>
+        <email>taja@bce.com</email>
+        <password>topsecret</password>
+    </user>
+    <user>
+        <name>Babita Ji</name>
+        <email>babita@bce.com</email>
+        <password>topsecret</password>
+    </user>
+    <user>
+        <name>Jethalal Gadha</name>
+        <email>jethalal@bce.com</email>
+        <password>topsecret</password>
+    </user>
+</root>
