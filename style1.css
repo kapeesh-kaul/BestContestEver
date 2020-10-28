@@ -1,0 +1,41 @@
+body {
+  background-color: #0c0129;
+  background-image: url("images/background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  color: white;
+  font-family: sans-serif;
+}
+
+#frm{
+	border: solid gray 1px;
+	width: 20%;
+	border-radius: 5px;
+	margin: 100px auto;
+	padding: 50px;
+}
+#btn{
+  display: inline-block;
+  padding: 2px;
+  font-size: 1rem;
+  color: white;
+  background: #0c0129;
+  border-radius: 2px;
+  transition: background 0.5s;
+  align-self: center;
+
+}
+#btn:hover{
+	  color: #0c0129;
+  background-color: white;
+  border: 1px solid white;
+  border-color: white;
+  transition: color 0.5s, background-color 0.5s, border 0.5s, border-color 0.5s;
+}
+
+h{
+	color: white;
+	font-size: 2rem;
+	font-weight:400;
+}
